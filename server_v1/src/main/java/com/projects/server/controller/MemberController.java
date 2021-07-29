@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
-//@Controller
+@Controller
 public class MemberController {
     private final MemberService memberService;
 
@@ -17,6 +17,7 @@ public class MemberController {
     public MemberController(MemberService memberService){
         this.memberService=memberService;
     }
+
 
     @PostMapping(value = "/members/new")
     public String create(MemberForm form){
